@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Icon } from "@iconify/react";
 import { Link, useLocation } from "react-router-dom";
 
-const SidebarContent = () => {
+const SidebarContent = ({ onClose }) => {
   const location = useLocation();
   const navs = [
     {
@@ -47,25 +47,26 @@ const SidebarContent = () => {
       type: 2,
       title: "Bantuan",
       icon: "solar:info-square-bold",
-      route: "/helps",
+      route: "/dashboard/helps",
     },
   ];
+
   return (
-    <div className="px-7 py-16">
+    <div className="px-4 sm:px-5 lg:px-7 py-8 lg:py-16">
       <div>
         {navs.map((nav, i) => {
           const isActive = location.pathname === nav.route;
           return nav.type === 1 ? (
             <h2
               key={i}
-              className="font-poppins font-normal uppercase text-gray-600 ml-9 mb-5"
+              className="font-poppins font-normal uppercase text-gray-600 ml-5 lg:ml-9 mb-3 lg:mb-5 text-xs lg:text-base mt-2"
             >
               {nav.title}
             </h2>
           ) : (
-            <Link to={nav.route} key={i}>
+            <Link to={nav.route} key={i} onClick={onClose}>
               <div
-                className={`px-9 py-7 flex space-x-5 items-center hover:bg-[#3674B5]/10 rounded-md group transition duration-200 cursor-pointer ${
+                className={`px-5 lg:px-9 py-4 lg:py-7 flex space-x-4 lg:space-x-5 items-center hover:bg-[#3674B5]/10 rounded-md group transition duration-200 cursor-pointer ${
                   isActive && "bg-[#3674B5]/10"
                 }`}
               >
@@ -94,4 +95,4 @@ const SidebarContent = () => {
   );
 };
 
-export default SidebarContent
+export default SidebarContent;

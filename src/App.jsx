@@ -67,9 +67,9 @@ function App() {
                     path="/dashboard/financial-reports"
                     element={<FinancialReports />}
                   />
+                  <Route path="/dashboard/helps" element={<Helps />} />
                 </Route>
 
-                <Route path="/helps" element={<Helps />} />
               </Routes>
             </EventBusProvider>
           </Router>
