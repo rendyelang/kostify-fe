@@ -89,16 +89,16 @@ const AddRoom = () => {
   };
 
   return (
-    <main className="px-12 pt-8">
+    <main className="px-4 sm:px-6 md:px-8 lg:px-12 pt-6 sm:pt-8 pb-8">
       <h1 className="font-semibold text-xl mb-1">Tambah Kamar</h1>
       <p className="text-xs text-gray-500 mb-6">
         Informasi seluruh data kamar dan fasilitas didalamnya
       </p>
 
-      <div className="bg-white shadow-md p-9 rounded-xl">
-        <form onSubmit={handleSubmit} className="flex gap-10">
+      <div className="bg-white shadow-md p-4 sm:p-6 lg:p-9 rounded-xl">
+        <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row gap-6 lg:gap-10">
           {/* Upload Image */}
-          <div className="w-60 space-y-3">
+          <div className="w-full lg:w-60 space-y-3">
             <label htmlFor="input-image" className="cursor-pointer block">
               <div className="flex justify-center items-center w-full h-40 bg-gray-200 rounded-lg hover:bg-gray-300 transition">
                 <div className="text-center">
@@ -147,7 +147,7 @@ const AddRoom = () => {
 
           {/* Form */}
           <div className="flex-1 space-y-5">
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-sm font-medium">Nama Kamar</label>
                 <input

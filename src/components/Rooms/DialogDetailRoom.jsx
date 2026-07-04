@@ -41,8 +41,8 @@ const DialogDetailRoom = () => {
   if (!room) return null;
 
   return (
-    <div className="absolute inset-0 z-10 h-[calc(100vh-100px)] flex justify-center items-center backdrop-blur-sm bg-white/10">
-      <div className="relative bg-white max-w-2xl w-full rounded-xl overflow-hidden shadow-md">
+    <div className="absolute inset-0 z-10 min-h-[calc(100vh-64px)] sm:min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-100px)] flex justify-center items-center backdrop-blur-sm bg-white/10 p-4">
+      <div className="relative bg-white max-w-2xl w-full rounded-xl overflow-hidden shadow-md max-h-[90vh] overflow-y-auto">
         {/* Close */}
         <div className="absolute right-3 top-3 z-10">
           <button
@@ -57,7 +57,7 @@ const DialogDetailRoom = () => {
         <img
           src={room.image_url?.[0]}
           alt={room.room_name}
-          className="h-96 w-full object-cover"
+          className="h-48 sm:h-64 lg:h-96 w-full object-cover"
         />
 
         {/* Content */}

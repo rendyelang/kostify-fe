@@ -17,20 +17,20 @@ const Rooms = () => {
   });
 
   return (
-    <main className="px-12 pt-8 relative">
-      <div className="flex justify-between w-full">
+    <main className="px-4 sm:px-6 md:px-8 lg:px-12 pt-6 sm:pt-8 pb-8 relative">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 w-full">
         <div>
-          <h1 className="font-semibold text-xl">Data Kamar</h1>
+          <h1 className="font-semibold text-lg sm:text-xl">Data Kamar</h1>
           <p className="font-light text-xs">
             Informasi seluruh data kamar dan fasilitas didalamnya
           </p>
         </div>
-        <button onClick={() => navigate("/dashboard/rooms/add")}>
+        <button onClick={() => navigate("/dashboard/rooms/add")} className="self-start sm:self-auto">
           <Icon
             icon="icon-park-solid:add"
             className="text-[#3674B5]"
-            width="40"
-            height="40"
+            width="36"
+            height="36"
           />
         </button>
       </div>

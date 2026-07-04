@@ -16,7 +16,7 @@ const FilterRooms = ({selectedFilter, setSelectedFilter}) => {
         },
       ];
   return (
-    <div className="mt-6 flex space-x-3 mb-6">
+    <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
       {filters.map((filter, i) => {
         const isActive = selectedFilter === filter.type;
         return (
